@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>🎧Switching Mode in application making of Headphones</title>
+</head>
+
+<body class="light-theme" id="body">
+    <main>
+        <nav>
+            <div class="nav__header">
+
+                <div class="nav__menu__btn" id="menu-btn">
+                    <i class="ri-menu-line"></i>
+                </div>
+            </div>
+            <ul class="nav__links" id="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#product">AboutUs</a></li>
+                <li><a href="#store">Product</a></li>
+                <li><button class="btn" id="btn">Buy Now</button></li>
+            </ul>
+            <div class="nav__logo">
+                <a href="#">
+                    <img src="assets/moon.png" alt="dark mode" class="logo-dark" id="dark-logo"
+                        onclick="toggleTheme()" />
+                    <img src="assets/sunny.png" alt="light mode" class="logo-light" id="light-logo"
+                        onclick="toggleTheme()" />
+                </a>
+            </div>
+        </nav>
+        <header class="section__container header__container" id="home">
+            <div class="header__image">
+                <img src="assets/header.png" alt="header" />
+                <img src="assets/header-bg.png" alt="header_bg" class="header-bg" />
+                <div class="header__image__content">
+                    <h4>Price: Rs.2000</h4>
+                    <button class="btn">Add to cart</button>
+                </div>
+            </div>
+            <div class="header__content">
+                <h1>Bluetooth<br />Headphone</h1>
+                <p>
+                    Headphones are available with a wide range of feature sets to make your listening more convenient,
+                    useful and pleasurable for your particular listening style.
+                </p>
+            </div>
+        </header>
+    </main>
+    <script>
+        function toggleTheme() {
+            var body = document.getElementById('body');
+            var darkLogo = document.getElementById('dark-logo');
+            var lightLogo = document.getElementById('light-logo');
+
+            if (body.classList.contains('light-theme')) {
+                body.classList.remove('light-theme');
+                body.classList.add('dark-theme');
+            } else {
+                body.classList.remove('dark-theme');
+                body.classList.add('light-theme');
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>
